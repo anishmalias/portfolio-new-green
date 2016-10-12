@@ -212,5 +212,38 @@ jQuery(function($){
         'slow');
 	});
 
+	// Google map
+
+	function initMap() {
+		var url = 'img/';
+		var myLatLng = {lat: 9.932759, lng: 76.390382};
+		
+	    var styleArray = [
+			{
+			  stylers: 
+			  [
+			  	{ saturation: 0 }
+			  ]
+			}
+		 ]
+		 
+		var map = new google.maps.Map(document.getElementById('map'), {
+			center: myLatLng, 
+			zoom: 13,
+			scrollwheel: false,
+
+			styles: styleArray,
+		});
+		
+		var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			title: 'MindLabs System Pvt Ltd',
+			icon: url + 'img-map-marker.png'
+		});
+		
+	}
 	
+	initMap();
+
 });
