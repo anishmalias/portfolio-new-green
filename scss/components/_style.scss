@@ -71,12 +71,12 @@ nav .brand-logo img {
 
 
 .side-nav li:hover{
-  color: #fff;
+  color: $white-color;
 }
 
 
 .side-nav li a:hover{
-  color: #fff;
+  color: $white-color;
 }
 
 
@@ -95,7 +95,7 @@ nav .brand-logo img {
   left:0;
   right:0;
   bottom:0;
-  background-color:#fff; /* change if the mask should have another color then white */
+  background-color:$white-color; /* change if the mask should have another color then white */
   z-index:99999; /* makes sure it stays on top */ 
 }
 
@@ -115,7 +115,7 @@ nav .brand-logo img {
 
 
 #home {
-  background-image: url("img/home-img1.jpg");
+  background-image: url("../img/home-img1.jpg");
   background-position: 100% 100%;
   background-size: 100% 100%;
   position: relative;
@@ -141,7 +141,7 @@ nav .brand-logo img {
 
 
 .home-title{
-  color: #fff;
+  color: $white-color;
   font-size: 72px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -150,7 +150,7 @@ nav .brand-logo img {
 
 
 .home-inner>p{
-  color: #fff;
+  color: $white-color;
   font-size: 18px;
   font-weight: 300;
   margin-bottom: 38px;
@@ -170,7 +170,7 @@ nav .brand-logo img {
 /*--------------------*/
 
 #about{
-  background-color: #fafafa;
+  background-color: $grey_color;
   padding: 80px 0px; 
   border-bottom: 1px solid #f5f5f5;  
 }
@@ -266,7 +266,7 @@ nav .brand-logo img {
 
 
 #skill{
-  background-color: #fff; 
+  background-color: $white-color; 
   padding: 60px 0;
 }
 
@@ -311,7 +311,9 @@ nav .brand-logo img {
 
 .pro-bar-container {
   border-radius: 0;
-  height: 30px;  
+  margin-bottom: 20px;
+  overflow: hidden;  
+  border: 2px solid $black_color;
 }
 
 
@@ -334,12 +336,12 @@ nav .brand-logo img {
 
 
 .experience-inner .title{
-  color: #fff;
+  color: $white-color;
 }
 
 
 .experience-inner > p {
-  color: #fff;
+  color: $white-color;
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
@@ -419,7 +421,7 @@ nav .brand-logo img {
 
 
 #edcuation{
-  background-color: #fafafa;
+  background-color: $grey_color;
   padding: 60px 0;
   width: 100%;
 }
@@ -457,7 +459,7 @@ nav .brand-logo img {
 
 
 .portfolio-top-inner h2{
-  color: #fff;
+  color: $white-color;
     display: inline-block;
     width: 100%;
 }
@@ -472,7 +474,7 @@ nav .brand-logo img {
 
 
 .filter {
-  background-color: #fff;
+  background-color: $white-color;
   font-size: 14px;
   font-weight: bold;
   margin-right: 5px;
@@ -480,12 +482,12 @@ nav .brand-logo img {
 
 
 .filter:hover{
-  color: #fff;
+  color: $white-color;
 }
 
 
 .filter:focus{
-  color: #fff;
+  color: $white-color;
 }
 
 
@@ -501,6 +503,7 @@ nav .brand-logo img {
 
   width: 100%;
 }
+
 
 
 #portfolio-list{
@@ -527,11 +530,60 @@ nav .brand-logo img {
 }
 
 
-#portfolio-list .mix a{
-  display: block;
-  position: relative;
-  height: 100%;
-  overflow: hidden;
+#portfolio-list {
+  .mix {
+    a{
+      display: block;
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+
+      span{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin:auto;
+        width: 70px;
+        height: 70px;
+        background: $white;
+        color: $primary-color;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 17px;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        transform: translate(-50px, 0px);
+        -webkit-transform: translate(-50px, 0px);
+        -moz-transform: translate(-50px, 0px-50px, 0px);
+        -ms-transform: translate(-50px, 0px);
+        -o-transform: translate(-50px, 0px);
+        opacity: 0;
+        filter: alpha(opacity=0);
+        @include border-radius-1;
+        @include transition-1;
+
+        &:before{
+          content: "\f0c1";
+          font-family: FontAwesome;
+          display: block;
+        }
+      }
+
+      &:hover{
+        span{
+          opacity: 1;
+          filter: alpha(opacity=100);
+          transform: translate(0px, 0px);
+          -webkit-transform: translate(0px, 0px);
+          -moz-transform: translate(0px, 0px);
+          -ms-transform: translate(0px, 0px);
+          -o-transform: translate(0px, 0px);
+        }
+      }
+    }
+  }
 }
 
 
@@ -543,19 +595,13 @@ nav .brand-logo img {
   left: 0;
   position: absolute;
   top: 0;
-  transition: border-width 0.2s ease 0s, border-color 0.2s ease 0s;
+  @include transition-1;
   width: 100.5%;
 }
 
 
 #portfolio-list .mix:hover > a::before {
   opacity: 0.8;
-  -webkit-transition: background-color 0.5s ease-in-out;
--moz-transition: background-color 0.5s ease-in-out;
--o-transition: background-color 0.5s ease-in-out;
--ms-transition: background-color 0.5s ease-in-out; 
-transition: background-color 0.5s ease-in-out;
- 
 }
 
 
@@ -566,7 +612,7 @@ transition: background-color 0.5s ease-in-out;
 
 
 .view-icon {
-  color: #fff;
+  color: $white-color;
   top: 42%;
   visibility: hidden;  
   font-size: 50px !important;
@@ -627,7 +673,7 @@ transition: background-color 0.5s ease-in-out;
 
 
 .single-facts {
-  background: #fff none repeat scroll 0 0;
+  background: $white-color none repeat scroll 0 0;
   display: inline;
   float: left;  
   text-align: center;
@@ -683,12 +729,12 @@ transition: background-color 0.5s ease-in-out;
 
 
 .testimonial-inner h2{
-  color: #fff;
+  color: $white-color;
 }
 
 
 .testimonial-inner p{
-  color: #fff;
+  color: $white-color;
 }
 
 
@@ -709,7 +755,7 @@ transition: background-color 0.5s ease-in-out;
 
 
 .single-testimonial {  
-  background-color: #fff;
+  background-color: $white-color;
   border-radius: 2px;
   margin: 0.5rem 0 1rem;
   overflow: hidden;
@@ -894,14 +940,14 @@ transition: background-color 0.5s ease-in-out;
 
 .readmore-btn:hover{
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  color: #fff !important;
+  color: $white-color !important;
   padding-right: 10px;
 }
 
 
 .allpost-btn,
 .allpost-btn:hover{
-  background-color: #fff;
+  background-color: $white-color;
   color: #727272;
   font-size: 14px;
   margin-top: 5px;
@@ -935,12 +981,12 @@ transition: background-color 0.5s ease-in-out;
 
 
 .footer-top-inner>h2{
-  color: #fff;
+  color: $white-color;
 }
 
 
 .footer-top-inner>p{
-  color: #fff;
+  color: $white-color;
 }
 
 
@@ -952,7 +998,7 @@ transition: background-color 0.5s ease-in-out;
 
 
 .contact-form {
-  background: #fff none repeat scroll 0 0;
+  background: $white-color none repeat scroll 0 0;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   
   border-radius: 4px;
@@ -991,7 +1037,7 @@ textarea.materialize-textarea {
 .submit-btn:hover,
 .submit-btn:focus{
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  color: #fff;
+  color: $white-color;
   padding-left: 10px;
 }
 
@@ -999,8 +1045,7 @@ textarea.materialize-textarea {
 .contact-map{
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  height: 500px;
- 
+  height: 513px;
   width: 100%;
 }
 
@@ -1012,7 +1057,7 @@ textarea.materialize-textarea {
 
 
 .footer-bottom{
-  background-color: #fff;
+  background-color: $white-color;
   
   width: 100%;
 }
@@ -1051,7 +1096,7 @@ textarea.materialize-textarea {
 
 
 .up-btn {
-  background-color: #fff;
+  background-color: $white-color;
   color: #000;
   left: 47.7%;
   position: absolute;
@@ -1065,7 +1110,7 @@ textarea.materialize-textarea {
 
 
 .up-btn:hover,.up-btn:focus{
-  background-color: #fff;
+  background-color: $white-color;
 }
 
 
@@ -1116,7 +1161,7 @@ textarea.materialize-textarea {
 
 
 .header-title {
-  color: #fff;
+  color: $white-color;
   font-size: 40px;
   font-weight: 900;
   line-height: 40px;
@@ -1131,12 +1176,12 @@ textarea.materialize-textarea {
 
 
 .overlay-content .single-meta{
-  color: #fff;
+  color: $white-color;
 }
 
 
 .overlay-content .single-meta a{
-  color: #fff;
+  color: $white-color;
 }
 
 
@@ -1146,7 +1191,7 @@ textarea.materialize-textarea {
 
 
 .overlay-content .post-comment:hover{
-  color: #fff !important;
+  color: $white-color !important;
 }
 
 
@@ -1242,7 +1287,7 @@ textarea.materialize-textarea {
 
 
 .blog-content blockquote {
-  background-color: #fff;
+  background-color: $white-color;
   padding: 10px;
 }
 
@@ -1403,7 +1448,7 @@ textarea.materialize-textarea {
 
 
 .commentlist li {
-  background-color: #fff;
+  background-color: $white-color;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   display: inline;
   float: left;
@@ -1463,7 +1508,7 @@ textarea.materialize-textarea {
 
 .reply-btn:hover{
   text-decoration: none;
-  color: #fff;
+  color: $white-color;
   outline: none;  
 }
 
@@ -1474,7 +1519,7 @@ textarea.materialize-textarea {
 
 
 .author-comments .author-name{
-  color: #fff;
+  color: $white-color;
 }
 
 
@@ -1484,7 +1529,7 @@ textarea.materialize-textarea {
 
 
 .author-comments p{
-  color: #fff;
+  color: $white-color;
 }
 
 
@@ -1514,8 +1559,8 @@ textarea.materialize-textarea {
 
 
 .comments-pagination li a {
-  background: #fff none repeat scroll 0 0;
-  border: 1px solid #fff;
+  background: $white-color none repeat scroll 0 0;
+  border: 1px solid $white-color;
   color: #ccc;
   display: inline-block;
   font-size: 15px;
@@ -1549,7 +1594,7 @@ textarea.materialize-textarea {
 
 
 #respond {
-  background: #fff none repeat scroll 0 0;
+  background: $white-color none repeat scroll 0 0;
   display: inline;
   float: left;
   margin-top: 30px;
@@ -1608,7 +1653,7 @@ textarea.materialize-textarea {
 
 
 .form-submit input {
-  background-color: #fff;
+  background-color: $white-color;
   border: 1px solid #ccc;
   color: #000;
   font-size: 16px;
@@ -1753,7 +1798,7 @@ textarea.materialize-textarea {
 
 .tagcloud a:hover,
 .tagcloud a:focus{
-  color: #fff;
+  color: $white-color;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -1805,7 +1850,7 @@ textarea.materialize-textarea {
 .prev-post:focus,
 .next-post:hover,
 .next-post:focus{
-  color: #fff;
+  color: $white-color;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
