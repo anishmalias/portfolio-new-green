@@ -26,7 +26,7 @@ img{
 
 
 
-a {
+a, a:hover {
   color: $primary-color;
 }
 
@@ -210,4 +210,13 @@ Author URI : http://www.markups.io/
    &.btn-large{
         background: $white-color;
    } 
+}
+
+.exp-icon{
+    text-align: center;
+    font-size: 110px;
+    color: $primary-color;
+}
+.education-icon{
+    @extend .exp-icon;
 }

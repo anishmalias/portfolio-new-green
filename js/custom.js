@@ -238,7 +238,7 @@ jQuery(function($){
 		var marker = new google.maps.Marker({
 			position: myLatLng,
 			map: map,
-			title: 'MindLabs System Pvt Ltd',
+			title: '',
 			icon: url + 'img-map-marker.png'
 		});
 		

@@ -10642,30 +10642,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0); }
 
-/*
-Template Name: MU Material
-Author: MarkUps
-Author URI: http://www.markups.io/
-Description: MU Material - Responsive Personal Portfolio Template with Material Design
-Version: 1.0
-Tags: light, white,One page,Personal,Portfolio,Material,Flat,custom-colors,Multi Color,responsive, html5, css3
-*/
-/* Table of Content
-==================================================
-
-  #BASIC TYPOGRAPHY
-  #HOME 
-  #ABOUT SECTION
-  #RESUME SECTION
-  #PORTFOLIO SECTION
-  #FACTS SECTION
-  #TESTIMONIAL SECTION
-  #HOME BLOG  
-  #FOOTER 
-  #BLOG PAGE  
-  #RESPONSIVE CSS
-
-*/
 /*--------------------*/
 /* BASIC TYPOGRAPHY */
 /*--------------------*/
@@ -10684,25 +10660,23 @@ h6 {
   line-height: 14px;
   padding: 25px 20px;
   text-transform: uppercase;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s; }
+  transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s; }
 
 nav .brand-logo {
   font-weight: bold; }
-
-nav .brand-logo img {
-  height: 45px;
-  margin-top: 10px; }
+  nav .brand-logo img {
+    height: 45px;
+    margin-top: 10px; }
 
 .side-nav a {
   text-transform: uppercase; }
-
-.side-nav li:hover {
-  color: #fff; }
-
 .side-nav li a:hover {
+  color: #fff; }
+.side-nav li:hover {
   color: #fff; }
 
 .main-wrapper {
@@ -12491,7 +12465,7 @@ img {
   max-width: 100%; }
 
 /* page style */
-a {
+a, a:hover {
   color: #00a8ff; }
 
 .navbar-fixed nav {
@@ -12663,5 +12637,10 @@ Author URI : http://www.markups.io/
 ========================================*/
 .btn-floating.btn-large {
   background: #fff; }
+
+.exp-icon, .education-icon {
+  text-align: center;
+  font-size: 110px;
+  color: #00a8ff; }
 
 /*# sourceMappingURL=main.css.map */
