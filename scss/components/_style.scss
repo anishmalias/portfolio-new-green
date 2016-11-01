@@ -176,54 +176,44 @@ nav{
 
 .about-inner-right{ 
   min-height: 250px;
+  >p{
+    color: $dark_grey;
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 35px;
+  }
+  >h3{
+    margin-top: 0px;
+    font-size: 24px;
+    font-weight: 600;  
+  }
 }
-
-
-.about-inner-right>p{
-  color: $dark_grey;
-  font-size: 15px;
-  line-height: 28px;
-  margin-bottom: 35px;
-}
-
-
-.about-inner-right>h3{
-  margin-top: 0px;
-  font-size: 24px;
-  font-weight: 600;  
-  text-transform: uppercase;
-}
-
 
 .personal-information{
   display: inline;
   float: left;
   width: 100%;
+
+  >h3{
+    margin-top: 0px;
+    font-size: 24px;
+    font-weight: 600;  
+  }
+  ul{
+    li{
+      border-bottom: 1px solid #eeeeee;
+      color: $dark_grey;
+      font-size: 15px;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+    }
+  }
 }
-
-
-.personal-information>h3{
-  margin-top: 0px;
-  font-size: 24px;
-  font-weight: 600;  
-  text-transform: uppercase;
-}
-
-
-.personal-information ul li{
-  border-bottom: 1px solid #eeeeee;
-  color: $dark_grey;
-  font-size: 15px;
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-}
-
 
 .resume-btn{
   margin-top: 189px;
   margin-left: 50px;
 }
-
 
 .pro-bar-container.color-wisteria {
   background-color: #eee;
@@ -248,15 +238,13 @@ nav{
 
 .skill-inner{
   width: 100%;
+  p{
+    color: $dark_grey;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+  }
 }
-
-
-.skill-inner p{
-  color: $dark_grey;
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 400;
-} 
 
 
 .title{
@@ -264,24 +252,21 @@ nav{
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 35px;
-  text-transform: uppercase;
 }
 
 
 .skill-progress-bar{
   width: 100%;  
+
+  span{
+    color: $dark_grey;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
 }
-
-
-.skill-progress-bar span {
-  color: $dark_grey;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-
 
 .pro-bar-container {
   border-radius: 0;
@@ -304,21 +289,16 @@ nav{
 
 
 .experience-inner{
- 
   width: 100%;
-}
-
-
-.experience-inner .title{
-  color: $white-color;
-}
-
-
-.experience-inner > p {
-  color: $white-color;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px;
+  .title{
+    color: $white-color;
+  }
+  > p{
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+  }
 }
 
 

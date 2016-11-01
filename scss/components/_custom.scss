@@ -26,7 +26,7 @@ img{
 
 
 
-a, a:hover {
+a {
   color: $primary-color;
 }
 
@@ -219,4 +219,11 @@ Author URI : http://www.markups.io/
 }
 .education-icon{
     @extend .exp-icon;
+}
+nav{
+  .brand-logo{
+    &:hover{
+      color: $navbar-font-color;
+    }
+  }
 }

@@ -2099,7 +2099,7 @@ a {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #00a8ff; }
+  border-left: 5px solid #ff5e00; }
 
 i {
   line-height: inherit; }
@@ -2138,7 +2138,7 @@ video.responsive-video {
   .pagination li.active a {
     color: #fff; }
   .pagination li.active {
-    background-color: #00a8ff; }
+    background-color: #ff5e00; }
   .pagination li.disabled a {
     cursor: default;
     color: #999; }
@@ -2272,7 +2272,7 @@ ul.staggered-list li {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
   footer.page-footer .footer-copyright {
     overflow: hidden;
     height: 50px;
@@ -4823,7 +4823,7 @@ input[type=range] + .thumb {
 
 nav {
   color: #fff;
-  background-color: #00a8ff;
+  background-color: #ff5e00;
   width: 100%;
   height: 56px;
   line-height: 56px; }
@@ -7456,7 +7456,7 @@ small {
     width: 15%;
     min-width: 80px; }
     .tabs .tab a {
-      color: #00a8ff;
+      color: #ff5e00;
       display: block;
       width: 100%;
       height: 100%;
@@ -7464,15 +7464,15 @@ small {
       overflow: hidden;
       transition: color .28s ease; }
       .tabs .tab a:hover {
-        color: #66cbff; }
+        color: #ff9e66; }
     .tabs .tab.disabled a {
-      color: #66cbff;
+      color: #ff9e66;
       cursor: default; }
   .tabs .indicator {
     position: absolute;
     bottom: 0;
     height: 2px;
-    background-color: #4dc2ff;
+    background-color: #ff8e4d;
     will-change: left, right; }
 
 .material-tooltip {
@@ -9145,7 +9145,7 @@ input[type=range]:focus::-ms-fill-upper {
     padding: 16px 16px 0; } }
 .side-nav .collapsible-body li.active,
 .side-nav.fixed .collapsible-body li.active {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
   .side-nav .collapsible-body li.active a,
   .side-nav.fixed .collapsible-body li.active a {
     color: #fff; }
@@ -10772,36 +10772,30 @@ nav .brand-logo {
 
 .about-inner-right {
   min-height: 250px; }
-
-.about-inner-right > p {
-  color: #727272;
-  font-size: 15px;
-  line-height: 28px;
-  margin-bottom: 35px; }
-
-.about-inner-right > h3 {
-  margin-top: 0px;
-  font-size: 24px;
-  font-weight: 600;
-  text-transform: uppercase; }
+  .about-inner-right > p {
+    color: #727272;
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 35px; }
+  .about-inner-right > h3 {
+    margin-top: 0px;
+    font-size: 24px;
+    font-weight: 600; }
 
 .personal-information {
   display: inline;
   float: left;
   width: 100%; }
-
-.personal-information > h3 {
-  margin-top: 0px;
-  font-size: 24px;
-  font-weight: 600;
-  text-transform: uppercase; }
-
-.personal-information ul li {
-  border-bottom: 1px solid #eeeeee;
-  color: #727272;
-  font-size: 15px;
-  margin-bottom: 12px;
-  padding-bottom: 12px; }
+  .personal-information > h3 {
+    margin-top: 0px;
+    font-size: 24px;
+    font-weight: 600; }
+  .personal-information ul li {
+    border-bottom: 1px solid #eeeeee;
+    color: #727272;
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-bottom: 12px; }
 
 .resume-btn {
   margin-top: 189px;
@@ -10822,30 +10816,27 @@ nav .brand-logo {
 
 .skill-inner {
   width: 100%; }
-
-.skill-inner p {
-  color: #727272;
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 400; }
+  .skill-inner p {
+    color: #727272;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400; }
 
 .title {
   font-size: 48px;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 35px;
-  text-transform: uppercase; }
+  margin-bottom: 35px; }
 
 .skill-progress-bar {
   width: 100%; }
-
-.skill-progress-bar span {
-  color: #727272;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-transform: uppercase; }
+  .skill-progress-bar span {
+    color: #727272;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase; }
 
 .pro-bar-container {
   border-radius: 0;
@@ -10862,15 +10853,13 @@ nav .brand-logo {
 
 .experience-inner {
   width: 100%; }
-
-.experience-inner .title {
-  color: #fff; }
-
-.experience-inner > p {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px; }
+  .experience-inner .title {
+    color: #fff; }
+  .experience-inner > p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px; }
 
 .experience-slider {
   margin-top: 55px; }
@@ -11010,7 +10999,7 @@ nav .brand-logo {
     width: 70px;
     height: 70px;
     background: #fff;
-    color: #00a8ff;
+    color: #ff5e00;
     font-size: 24px;
     text-align: center;
     padding-top: 17px;
@@ -12465,86 +12454,86 @@ img {
   max-width: 100%; }
 
 /* page style */
-a, a:hover {
-  color: #00a8ff; }
+a {
+  color: #ff5e00; }
 
 .navbar-fixed nav {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .side-nav li:hover {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .btn, .btn-large, .btn-large {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .btn:hover, .btn-large:hover, .btn-large:hover {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .home-title span {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .about-inner-right > h3 {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .personal-information > h3 {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .title {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .card-subtitle {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .portfolio-top {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .filter {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .filter:focus {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 #portfolio-list .mix:hover > a::before {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .counter {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .pro-bar-container.color-wisteria {
-  border-color: #00a8ff; }
+  border-color: #ff5e00; }
 
 .pro-bar.color-amethyst {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .call-to-about i {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .blog-post .card-action a {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .post-comment:hover {
-  color: #00a8ff !important; }
+  color: #ff5e00 !important; }
 
 .readmore-btn:hover {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 #experience {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .card-title i {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .customNavigation i {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 #testimonial {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .testimonial-content h3 {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .footer-top {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 input[type="text"]:focus:not([readonly]) + label,
 input[type="password"]:focus:not([readonly]) + label,
@@ -12557,7 +12546,7 @@ input[type="tel"]:focus:not([readonly]) + label,
 input[type="number"]:focus:not([readonly]) + label,
 input[type="search"]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 input[type="text"]:focus:not([readonly]),
 input[type="password"]:focus:not([readonly]),
@@ -12570,66 +12559,66 @@ input[type="tel"]:focus:not([readonly]),
 input[type="number"]:focus:not([readonly]),
 input[type="search"]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #00a8ff;
-  box-shadow: 0 1px 0 0 #00a8ff; }
+  border-bottom: 1px solid #ff5e00;
+  box-shadow: 0 1px 0 0 #ff5e00; }
 
 .submit-btn {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .submit-btn:hover,
 .submit-btn:focus {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .overlay-header {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .blog-content blockquote {
-  border-left: 5px solid #00a8ff; }
+  border-left: 5px solid #ff5e00; }
 
 .share-area h4 i,
 .tag-area h4 i {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .share-area a:hover,
 .share-area a:focus {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .author-comments {
-  background-color: #00a8ff !important; }
+  background-color: #ff5e00 !important; }
 
 .reply-btn:hover {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .pagination li.active {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .card .card-action a {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .tagcloud a:hover,
 .tagcloud a:focus {
   color: #fff;
-  background-color: #00a8ff;
-  border-color: #00a8ff; }
+  background-color: #ff5e00;
+  border-color: #ff5e00; }
 
 .prev-post:hover,
 .prev-post:focus,
 .next-post:hover,
 .next-post:focus {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .submit-btn {
-  color: #00a8ff; }
+  color: #ff5e00; }
 
 .side-nav li:hover,
 .side-nav li.active {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .progress .indeterminate {
-  background-color: #00a8ff; }
+  background-color: #ff5e00; }
 
 .nav-growpop div {
-  border: 1px solid #00a8ff; }
+  border: 1px solid #ff5e00; }
 
 /*=======================================
 Template Design By MarkUps.
@@ -12641,6 +12630,9 @@ Author URI : http://www.markups.io/
 .exp-icon, .education-icon {
   text-align: center;
   font-size: 110px;
-  color: #00a8ff; }
+  color: #ff5e00; }
+
+nav .brand-logo:hover {
+  color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
