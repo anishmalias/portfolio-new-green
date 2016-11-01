@@ -144,7 +144,17 @@ textarea.materialize-textarea:focus:not([readonly]) {
   box-shadow: 0 1px 0 0 $primary-color;
 }
 .submit-btn{
-  color: $primary-color;  
+  color: $primary-color;
+  height: auto;
+  line-height: normal;
+  padding: 13px 24px 13px 34px;
+
+  &:hover{
+    padding-left:20px;
+  }  
+  &:focus{
+    padding-left:20px;
+  }
 }
 .submit-btn:hover,
 .submit-btn:focus{
