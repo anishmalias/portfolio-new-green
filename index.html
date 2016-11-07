@@ -31,17 +31,21 @@
                 <!-- Image Based Logo -->                
                  <!-- <a href="index.html" class="brand-logo"><img src="img/logo.jpeg" alt="logo img"></a>  -->
                 <ul class="right hide-on-med-and-down custom-nav menu-scroll">
-                  <li><a href="#about">About Me</a></li>
-                  <li><a href="#resume">Resume</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>                  
-                  <li><a href="#footer">Contact</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skill">Skills</a></li>      
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#edcuation">Edcuation</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#footer">Contact</a></li>
                 </ul>
                 <!-- For Mobile View -->
                 <ul id="slide-out" class="side-nav menu-scroll">
-                  <li><a href="#about">About Me</a></li>
-                  <li><a href="#resume">Resume</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>
-                  <li><a href="#footer">Contact</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#edcuation">Edcuation</a></li> 
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#footer">Contact</a></li>
                 </ul>
                 <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
               </div>
@@ -110,7 +114,7 @@
             </div>
           </section>
           <!-- Start Resume -->
-          <section id="resume">
+          <section>
             <!-- Start Skill -->
             <section id="skill">
               <div class="container">
@@ -458,21 +462,21 @@
                         <div class="row">
                           <div class="col s12 m6 l6">
                             <div class="contact-form">
-                              <form>
+                              <form method="post" action="contactengine.php">
                                 <div class="input-field">
-                                  <input type="text" class="input-box" name="contactName" id="contact-name">
+                                  <input type="text" class="input-box" name="Name" id="Name">
                                   <label class="input-label" for="contact-name">Name</label>
                                 </div>
                                 <div class="input-field">
-                                  <input type="email" class="input-box" name="contactEmail" id="email">
+                                  <input type="email" class="input-box" name="Email" id="Email">
                                   <label class="input-label" for="email">Email</label>
                                 </div>
                                 <div class="input-field">
-                                  <input type="text" class="input-box" name="contactSubject" id="subject">
+                                  <input type="text" class="input-box" name="Subject" id="Subject">
                                   <label class="input-label" for="subject">Subject</label>
                                 </div>
                                 <div class="input-field textarea-input">
-                                  <textarea class="materialize-textarea" name="contactMessage" id="textarea1"></textarea>
+                                  <textarea class="materialize-textarea" name="Message" id="Message"></textarea>
                                   <label class="input-label" for="textarea1">Message</label>
                                 </div>
                                 <button class=" waves-effect btn-flat brand-text submit-btn" type="submit">send message</button>
@@ -525,6 +529,7 @@
 
       <!-- Google map -->
       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+ 
       <!-- Custom Js -->
       <script src="js/custom.js"></script>      
     </body>
