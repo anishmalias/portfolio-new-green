@@ -248,29 +248,37 @@ jQuery(function($){
 
 
 	// contact form 
-
+    
+    
 	$('#contact-submit').click(function(){ 
+       var valid;	
+        valid = validateContactquick();
+        if(valid) {
 
-		    var valid;	
-		    valid = validateContactquick();
-		    if(valid) {
-		   
-		        jQuery.ajax({
-		            url: "contact-send.php",
-		            data:$("#contact-form").serialize(),
-		            type: "POST",
-		            success:function(data){
-		                $("#success-msg").html(data);
-					 },
-		            error:function (){
-				
-					
-					}
-					
-		        });
-		    }
-          return false;
+            jQuery.ajax({
+                url: "contact-send.php",
+                data:$("#contact-form").serialize(),
+                type: "POST",
+                success:function(data){
+                   
+                    $("#success-msg").append('<div class="msg-cnt">'+data+'</div>').fadeIn(250);
+                 },
+                error:function (){
+
+
+                }
+
+            });
+        }
+      return false;
     });
+    
+   
+    $(".close").on('click',function(e){
+        e.preventDefault();
+       $(this).parent().parent().fadeOut(250); 
+    });
+   
 
 	function validateContactquick() {
           var valid = true;	
@@ -312,4 +320,10 @@ jQuery(function($){
       		
         return valid;	
       }
+     
+    $("#contact-form .input-box, #contact-form  .materialize-textarea").keypress(function(){
+       validateContactquick();
+    });
+    
+    
 });

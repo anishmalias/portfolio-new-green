@@ -31,9 +31,9 @@ $Body .= "\n";
 
 // redirect to success page 
 if (mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>")){
-	echo "<span style='color:green'>Your Message Send successfully</span>";
+	echo "<span class='msg-wrap msg-sucess'>Your Message Send successfully</span><a href='#' class='close'></a>";
 }
 else{
-	echo "<span style='color:red'>There was an error. Please try again.</span>";
+	echo "<span class='msg-wrap msg-fail'>There was an error. Please try again.</span><a href='#' class='close'></a>";
 }
 ?>
