@@ -246,4 +246,70 @@ jQuery(function($){
 	
 	initMap();
 
+
+	// contact form 
+
+	$('#contact-submit').click(function(){ 
+
+		    var valid;	
+		    valid = validateContactquick();
+		    if(valid) {
+		   
+		        jQuery.ajax({
+		            url: "contact-send.php",
+		            data:$("#contact-form").serialize(),
+		            type: "POST",
+		            success:function(data){
+		                $("#success-msg").html(data);
+					 },
+		            error:function (){
+				
+					
+					}
+					
+		        });
+		    }
+          return false;
+    });
+
+	function validateContactquick() {
+          var valid = true;	
+          console.log(valid);
+         // $(".input-box").parent().addClass("validate");
+      	   $(".materialize-textarea").parent().addClass("validate");
+          $(".info").parent().removeClass("validate");
+
+          
+      	 if(!$("#name").val()) {
+              $("#name-info").html("Please enter the name");
+      		    $("#name").parent().addClass("validate");
+              valid = false;
+          }
+      	
+          if(!$("#email").val()) {
+              $("#email-info").html("Please enter the email address");
+      		 $("#email").parent().addClass("validate");
+              valid = false;
+          }
+      	
+          if(!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+              $("#email-info").html("Email is invalid");
+      		    $("#email").parent().addClass("validate");
+              valid = false;
+          }
+      	
+      	 if(!$("#subject").val()) {
+              $("#subject-info").html("Please enter a subject");
+      		    $("#subject").parent().addClass("validate");
+              valid = false;
+          }
+       
+        if(!$("#message").val()) {
+              $("#message-info").html("Please enter a message");
+      		    $("#message").parent().addClass("validate");
+              valid = false;
+          }
+      		
+        return valid;	
+      }
 });

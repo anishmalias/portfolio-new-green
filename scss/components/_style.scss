@@ -1042,7 +1042,64 @@ textarea.materialize-textarea {
 }
 
 
+/* form style (Validation) */
 
+.cnt-form{
+  position: relative;
+
+  .info{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      line-height: normal;
+      background: $harm_red;
+      color: $white-color;
+      padding: 4px 8px;
+      display: none;
+      font-size: 13px;
+      max-width: 80%; 
+
+      @include border-radius-2;
+
+      &:after{
+        content:'';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: $harm_red transparent transparent $harm_red;
+        border-width: 5px;
+        position: absolute;
+        bottom: -9px;
+        right: 8px;
+      }
+  }
+  &.validate{
+    .info{
+      display: block;
+    }
+    .input-box{
+      border-bottom: $harm_red 1px solid;
+      
+      &:focus{
+        box-shadow: 0 1px 0 0 $harm_red;
+        border-bottom: $harm_red 1px solid;
+        + .input-label{
+          color:$harm_red; 
+        }
+      }
+    }
+    .materialize-textarea{
+      border-bottom: $harm_red 1px solid;
+      &:focus{
+        box-shadow: 0 1px 0 0 $harm_red;
+        border-bottom: $harm_red 1px solid;
+        + .input-label{
+          color:$harm_red; 
+        }
+      }
+    }
+  }
+}
 
 
 
