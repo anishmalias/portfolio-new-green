@@ -261,7 +261,7 @@ jQuery(function($){
                 type: "POST",
                 success:function(data){
                    
-                    $("#success-msg").append('<div class="msg-cnt">'+data+'</div>').fadeIn(250);
+                    $("#success-msg .msg-cnt").html(data).parent().fadeIn(250);
                  },
                 error:function (){
 
@@ -273,11 +273,12 @@ jQuery(function($){
       return false;
     });
     
-   
-    $(".close").on('click',function(e){
-        e.preventDefault();
-       $(this).parent().parent().fadeOut(250); 
-    });
+   $( document ).ajaxComplete(function() {
+        $(".close").on('click',function(e){
+            e.preventDefault();
+           $(this).parent().parent().fadeOut(250); 
+        });
+    });   
    
 
 	function validateContactquick() {

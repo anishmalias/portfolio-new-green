@@ -1134,11 +1134,12 @@ textarea.materialize-textarea {
             font-size: 14px;
             color: $dark_grey;
             display: block;
+            padding-top: 3px;
         }
         .close{
             position: absolute;
-            top: -12px;
-            right: -12px;
+            top: -8px;
+            right: -8px;
             background: $primary-color;
             text-align: center;
             width: 23px;

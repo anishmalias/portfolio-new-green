@@ -11499,11 +11499,12 @@ textarea.materialize-textarea {
     #success-msg .msg-cnt .msg-wrap {
       font-size: 14px;
       color: #727272;
-      display: block; }
+      display: block;
+      padding-top: 3px; }
     #success-msg .msg-cnt .close {
       position: absolute;
-      top: -12px;
-      right: -12px;
+      top: -8px;
+      right: -8px;
       background: #66BB6A;
       text-align: center;
       width: 23px;
