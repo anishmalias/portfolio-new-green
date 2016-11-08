@@ -10,6 +10,10 @@
     </head>
 
     <body>
+	<style>
+	.info{color:#FF0000;font-size:12px;;}
+	
+	</style>
       <!-- BEGAIN PRELOADER -->         
       <div id="preloader">        
         <div class="progress">
@@ -462,24 +466,30 @@
                         <div class="row">
                           <div class="col s12 m6 l6">
                             <div class="contact-form">
-                              <form method="post" action="contactengine.php">
+					
+                              <form method="post" action="#"  id="contact-form">
                                 <div class="input-field">
-                                  <input type="text" class="input-box" name="Name" id="Name">
+                                  <input type="text" class="input-box" name="name" id="name">
                                   <label class="input-label" for="contact-name">Name</label>
+								  <span id="name-info" class="info"></span>
                                 </div>
                                 <div class="input-field">
-                                  <input type="email" class="input-box" name="Email" id="Email">
+                                  <input type="email" class="input-box" name="email" id="email">
                                   <label class="input-label" for="email">Email</label>
+								  <span id="email-info" class="info"></span>
                                 </div>
                                 <div class="input-field">
-                                  <input type="text" class="input-box" name="Subject" id="Subject">
+                                  <input type="text" class="input-box" name="subject" id="subject">
                                   <label class="input-label" for="subject">Subject</label>
+								   <span id="subject-info" class="info"></span>
                                 </div>
                                 <div class="input-field textarea-input">
-                                  <textarea class="materialize-textarea" name="Message" id="Message"></textarea>
+                                  <textarea class="materialize-textarea" name="message" id="message"></textarea>
                                   <label class="input-label" for="textarea1">Message</label>
+								  <span id="message-info" class="info"></span>
                                 </div>
-                                <button class=" waves-effect btn-flat brand-text submit-btn" type="submit">send message</button>
+                                <button class=" waves-effect btn-flat brand-text submit-btn" type="submit"  id="contact-submit">send message</button>
+										<span id="success-msg"></span>
                               </form>
                             </div>
                           </div>
@@ -531,6 +541,76 @@
       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
  
       <!-- Custom Js -->
-      <script src="js/custom.js"></script>      
+      <script src="js/custom.js"></script>  
+	  
+	  
+	  <script type="text/javascript">
+$(document).ready(function(){
+$('#contact-submit').click(function(){ 
+
+    var valid;	
+    valid = validateContactquick();
+    if(valid) {
+   
+        jQuery.ajax({
+            url: "contact-send.php",
+            data:$("#contact-form").serialize(),
+            type: "POST",
+            success:function(data){
+                $("#success-msg").html(data);
+			 },
+            error:function (){
+		
+			
+			}
+			
+        });
+    }
+return false;
+});
+
+});
+function validateContactquick() {
+    var valid = true;	
+    $(".input-box").css('border-color','#ccc');
+	   $(".materialize-textarea").css('border-color','#ccc');
+    $(".info").html('');
+
+    
+	if(!$("#name").val()) {
+        $("#name-info").html("Please enter the name.");
+		    $("#name").css('border-color','#f00');
+        valid = false;
+    }
+	
+    if(!$("#email").val()) {
+        $("#email-info").html("Please enter the email address.");
+		 $("#email").css('border-color','#f00');
+        valid = false;
+    }
+	
+    if(!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+        $("#email-info").html("Email is invalid.");
+		 $("#email").css('border-color','#f00');
+        valid = false;
+    }
+	
+	 if(!$("#subject").val()) {
+        $("#subject-info").html("Please enter a subject.");
+		 $("#subject").css('border-color','#f00');
+        valid = false;
+    }
+ 
+  if(!$("#message").val()) {
+        $("#message-info").html("Please enter a message.");
+		 $("#message").css('border-color','#f00');
+        valid = false;
+    }
+		
+	
+
+return valid;	
+}
+</script>   
     </body>
   </html>
