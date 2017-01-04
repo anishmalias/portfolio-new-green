@@ -10769,7 +10769,10 @@ nav .brand-logo {
 .profile-img {
   margin: 0 auto;
   display: block;
-  max-width: 100%; }
+  max-width: 100%;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%); }
 
 .about-inner-right {
   min-height: 250px; }
@@ -10834,8 +10837,8 @@ nav .brand-logo {
   .skill-progress-bar span {
     color: #727272;
     display: inline-block;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
     margin-bottom: 5px;
     text-transform: uppercase; }
 
@@ -11712,7 +11715,13 @@ textarea.materialize-textarea {
 
   .custom-pagination li a {
     font-size: 12px;
-    line-height: 25px; } }
+    line-height: 25px; }
+
+  .title {
+    font-size: 32px; } }
+@media (max-width: 600px) {
+  .contact-form {
+    margin-bottom: 20px; } }
 @media (max-width: 480px) {
   nav .brand-logo {
     font-size: 1.1rem; }
